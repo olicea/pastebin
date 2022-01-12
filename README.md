@@ -13,3 +13,17 @@ get a paste
 ```
 curl -K GET https://127.0.0.1:5000/pastebin/test -k
 ```
+
+
+## deploying
+
+build the container image
+```
+cd pastebin/
+docker build -t pastebin .
+```
+
+run the container
+```
+docker run -d -p 5001:5000 pastebin
+```
